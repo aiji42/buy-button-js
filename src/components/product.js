@@ -861,4 +861,8 @@ export default class Product extends Component {
   get hasCompareAtPrice() {
     return Boolean(this.selectedVariant && this.selectedVariant.compareAtPriceV2);
   }
+
+  setCustomAttributes(val) {
+    this.customAttributes = Array.isArray(val) ? val : [...this.customAttributes, val];
+  }
 }
